@@ -1,0 +1,121 @@
+/* style.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 400% 400%;
+  animation: rainbow 10s ease infinite;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+#logo {
+  width: 180px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#chat-container {
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+  border: 5px solid #ff69b4;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 60px;
+}
+
+#chat-box {
+  height: 400px;
+  overflow-y: auto;
+  width: 100%;
+  padding: 15px;
+  background-color: #ffe4e1;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.user, .bot {
+  width: 100%;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.bot {
+  color: #000080;
+}
+
+.user {
+  color: #333;
+}
+
+#input-area {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+  flex-direction: column;
+}
+
+#user-input {
+  width: 80%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #ff1493;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+footer::before {
+  content: "© 2025 VIT-AP Chatbot. All rights reserved.";
+}
